@@ -1,0 +1,28 @@
+<section class="login">
+    <div class="wrapper">
+        <div class="section-center">
+            <div class="contenedor-inputs">
+
+                <h3 class="titulo">INICIAR SESION</h3>
+
+                <input type="email" class="email-input" id="email" placeholder="Ingrese Correo electrónico">
+
+                <div class="contenedor-contrasena">
+                    <input type="password" class="password-input" id="password" [type]="hide ? 'password':'text'"  placeholder="Ingrese contraseña">
+                    <i class="material-icons" matSuffix (click)="hide = !hide"> {{hide ? 'visibility': 'visibility_off'}} </i>
+                </div>
+               
+
+                    <div class="olvide">
+                        <label class="olvide-clave" for="checkbox-signin">Olvidé mi contraseña</label>
+                    </div>
+
+                    <div class="botones">
+                    <button class="btn-iniciar-sesion" type="submit">Iniciar sesión</button>
+                    <button class="btn-registrar" type="submit" (click)="goRegistro()">Registrarme</button>
+                    </div>
+                   
+            </div>
+        </div>
+    </div>
+</section>

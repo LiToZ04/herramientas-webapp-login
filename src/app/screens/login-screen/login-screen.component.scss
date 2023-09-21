@@ -1,0 +1,116 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/IMG/BackGroundLogin.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.section-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: rgba(255, 255, 255, 0.452); 
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px; //borde redondeado
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.titulo {
+    font-size: 24px;
+    text-align: center;
+    font-family: fantasy;
+    font-style: italic;
+    color: #000000;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.contenedor-contrasena
+{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+}
+
+.email-input
+{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.password-input 
+{
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.material-icons
+{
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+    margin-left: 10px;
+}
+
+.olvide 
+{
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    color: #000000;
+    margin-top: 10px;
+}
+
+.olvide-clave {
+    cursor: pointer;
+}
+
+.botones
+{
+display: flex;
+flex-direction: row;
+}
+
+.btn-iniciar-sesion{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    opacity: 1;
+    font-size: 18px;
+    color: rgb(7, 6, 6);
+    font-weight: bold;
+    background-color: rgba(15, 167, 255, 0.651);
+    padding: 10px 20px;
+    border-radius: 10px; 
+    margin-right: 30px;
+}
+
+.btn-registrar
+{
+    cursor: pointer;
+    flex-direction: row;
+    align-self: flex-end;
+    opacity: 1;
+    font-size: 18px;
+    color: rgb(7, 6, 6);
+    font-weight: bold;
+    background-color: rgba(255, 15, 15, 0.651);
+    padding: 10px 20px;
+    border-radius: 10px; 
+    margin-left: 30px;
+}
