@@ -1,0 +1,70 @@
+.wrapper
+{
+    width: 100vw;
+    height: 100vh;
+    //Flex
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("/assets/IMG/BackGroundRegister2.jpg");
+    background-size: cover; 
+    
+}
+
+.section-registro
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-registro
+{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("/assets/IMG/BackGroundRegister.jpg");
+}
+
+.bottom-registro
+{
+    margin-top: 80vh;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("/assets/IMG/BackGroundRegister.jpg"); ;
+}
+
+.body-registro
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: rgba(255, 255, 255, 0.452); 
+    width: 100%;
+    max-width: 80vw;
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px; //borde redondeado
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.titulo-registro
+{
+    font-size: 38px;
+    font-family: fantasy;
+    text-align: center;
+    opacity: 1;
+    font-weight: bold;
+    color: #000000;
+}
