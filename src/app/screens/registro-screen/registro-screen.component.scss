@@ -1,5 +1,4 @@
-.wrapper
-{
+.wrapper{
     width: 100vw;
     height: 100vh;
     //Flex
@@ -7,13 +6,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("/assets/IMG/BackGroundRegister2.jpg");
-    background-size: cover; 
-    
+    background-image: url("/assets/IMG/BackGroundRegistro.png");
 }
 
-.section-registro
-{
+.section-registro{
     width: 100%;
     height: 100%;
     display: flex;
@@ -22,49 +18,95 @@
     align-items: center;
 }
 
-.header-registro
-{
+.header-registro{
     width: 100%;
     height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-image: url("/assets/IMG/BackGroundRegister.jpg");
-}
-
-.bottom-registro
-{
-    margin-top: 80vh;
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url("/assets/IMG/BackGroundRegister.jpg"); ;
-}
-
-.body-registro
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    background-color: rgba(255, 255, 255, 0.452); 
-    width: 100%;
-    max-width: 80vw;
-    margin-top: 30px;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.452);
     border-radius: 10px; //borde redondeado
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
 }
 
-.titulo-registro
-{
-    font-size: 38px;
+.title{
+    font-size: 28px;
     font-family: fantasy;
     text-align: center;
     opacity: 1;
     font-weight: bold;
-    color: #000000;
+    color: #050404;
+    letter-spacing: 4px;
+}
+
+.icon-back{
+    padding-left: 1.5rem;
+    color: #0c0b0b;
+    font-size: 28pt;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.icon-home{
+    padding-right: 1.5rem;
+    color: #0c0f0f;
+    font-size: 28pt;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.body-registro{
+    width: 60%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1.5rem;
+    gap: 1.5rem;
+    
+}
+
+.mat-input
+{
+    width: 100%!important;
+    height: 48px!important;
+    text-align: left!important;
+}
+
+.botones
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-registrarme{
+    cursor: pointer;
+    opacity: 1;
+    font-size: 18px;
+    color: rgb(7, 6, 6);
+    font-weight: bold;
+    background-color: rgba(15, 167, 255, 0.651);
+    padding: 15px 20px;
+    border-radius: 10px; 
+    margin-right: 150px;
+}
+
+.btn-cancelar
+{
+    cursor: pointer;
+    opacity: 1;
+    font-size: 18px;
+    color: rgb(7, 6, 6);
+    font-weight: bold;
+    background-color: rgba(255, 15, 15, 0.651);
+    padding: 15px 20px;
+    border-radius: 10px; 
+    margin-left: 150px;
 }

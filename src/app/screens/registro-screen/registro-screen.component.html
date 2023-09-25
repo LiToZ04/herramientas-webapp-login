@@ -3,17 +3,81 @@
         <div class="section-registro">
 
             <div class="header-registro">
-                
+                <mat-icon class="icon-back" (click)="regresar()">arrow_back</mat-icon>
+                <span *ngIf="!editar" class="title">ZONA DE REGISTRO</span>
+                <span *ngIf="editar" class="title">Actualizar usuario</span>
+                <mat-icon class="icon-home" (click)="regresar()" >home</mat-icon>
+
             </div>
     
             <div class="body-registro">
-                <h3 class="titulo-registro">REGISTRO</h3>
 
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>ID/Matrícula</mat-label>
+                    <input matInput [(ngModel)]="user.matricula" name="id" placeholder="Escriba su ID o matrícula">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput [(ngModel)]="user.first_name" placeholder="Escriba su Nombre">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Apellidos</mat-label>
+                    <input matInput [(ngModel)]="user.last_name" placeholder="Escriba sus Apellidos">
+                </mat-form-field>
                 
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Correo Electronico</mat-label>
+                    <input matInput [(ngModel)]="user.email" placeholder="example@123.com">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [(ngModel)]="user.Password" placeholder="Escribe Contraseña">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Confirmar Contraseña</mat-label>
+                    <input matInput [(ngModel)]="user.confirmar_password" placeholder="Confirme Contraseña">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Fecha de Nacimiento</mat-label>
+                    <input matInput [(ngModel)]="user.fecha_nacimiento" matInput [matDatepicker]="picker"placeholder="MM/DD/YYYY">
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>CURP</mat-label>
+                    <input matInput [(ngModel)]="user.CURP" placeholder="Escriba su CURP">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>RFC</mat-label>
+                    <input matInput [(ngModel)]="user.RFC" placeholder="Escriba su RFC">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Edad</mat-label>
+                    <input matInput [(ngModel)]="user.Edad" placeholder="Escriba su Edad">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Telefono</mat-label>
+                    <input matInput [(ngModel)]="user.Telefono" placeholder="Escriba su Telefono">
+                </mat-form-field>
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Ocupacion</mat-label>
+                    <input matInput [(ngModel)]="user.Ocupacion" placeholder="Escriba su Ocupacion">
+                </mat-form-field>
             </div>
-    
-            <div class="bottom-registro">
-    
+
+            <div class="botones">
+                <button class="btn-registrarme" type="submit">Registrarme</button>
+                <button class="btn-cancelar" type="submit" (click)="regresar()">Cancelar</button>
             </div>
 
         </div>
