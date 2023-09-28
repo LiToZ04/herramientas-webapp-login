@@ -1,1 +1,123 @@
-<p>registro-screen works!</p>
+<section class="registro">
+    <div class="wrapper">
+        <div class="section-registro">
+
+            <div class="header-registro">
+                <mat-icon class="icon-back" (click)="regresar()">arrow_back</mat-icon>
+                <span *ngIf="!editar" class="title">ZONA DE REGISTRO</span>
+                <span *ngIf="editar" class="title">Actualizar usuario</span>
+                <mat-icon class="icon-home" (click)="regresar()" >home</mat-icon>
+
+            </div>
+    
+            <div class="body-registro">
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>ID/Matrícula</mat-label>
+                    <input matInput [(ngModel)]="user.matricula" name="id" placeholder="Escriba su ID o matrícula">
+                    <mat-icon matPrefix class="my-icon">assignment_ind</mat-icon>
+                    <div *ngIf="errors.matricula" class="invalid-feedback">{{ errors.matricula }}</div>
+
+                </mat-form-field>
+                
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput [(ngModel)]="user.first_name" placeholder="Escriba su Nombre">
+                    <mat-icon matPrefix class="my-icon">face</mat-icon>
+                    <div *ngIf="errors.first_name" class="invalid-feedback">{{ errors.first_name }}</div>
+
+                </mat-form-field>
+              
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Apellidos</mat-label>
+                    <input matInput [(ngModel)]="user.last_name" placeholder="Escriba sus Apellidos">
+                    <mat-icon matPrefix class="my-icon">face</mat-icon>
+                    <div *ngIf="errors.last_name" class="invalid-feedback">{{ errors.last_name }}</div>
+                </mat-form-field>
+               
+                
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Correo Electronico</mat-label>
+                    <input matInput [(ngModel)]="user.email" placeholder="example@123.com">
+                    <mat-icon matPrefix class="my-icon">mail</mat-icon>
+                    <div *ngIf="errors.email" class="invalid-feedback">{{ errors.email }}</div>
+                </mat-form-field>
+               
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput [(ngModel)]="user.password" type="{{ inputType_1 }}" placeholder="Escribe Contraseña">
+                    <mat-icon matPrefix class="my-icon">https</mat-icon>
+                    <mat-icon matSuffix class="eye-icon" (click)="ShowPassword()">{{hide_1 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <div *ngIf="errors.password" class="invalid-feedback">{{ errors.password }}</div>
+                </mat-form-field>
+                
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Confirmar Contraseña</mat-label>
+                    <input matInput [(ngModel)]="user.confirmar_password"  type="{{ inputType_2 }}" placeholder="Confirme Contraseña">
+                    <mat-icon matPrefix class="my-icon">https</mat-icon>
+                    <mat-icon matSuffix class="eye-icon" (click)="ShowPwdConfirmar()">{{hide_2 ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    <div *ngIf="errors.confirmar_password" class="invalid-feedback">{{ errors.confirmar_password }}</div>
+
+                </mat-form-field>
+                
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Fecha de Nacimiento</mat-label>
+                    <input matInput [(ngModel)]="user.fecha_nacimiento" matInput [matDatepicker]="picker"placeholder="MM/DD/YYYY">
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-icon  matPrefix class="my-icon">date_range</mat-icon>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <div *ngIf="errors.fecha_nacimiento" class="invalid-feedback">{{ errors.fecha_nacimiento }}</div>
+                </mat-form-field>
+              
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>CURP</mat-label>
+                    <input matInput [(ngModel)]="user.curp" placeholder="Escriba su CURP">
+                    <mat-icon matPrefix class="my-icon">picture_as_pdf</mat-icon>
+                    <div *ngIf="errors.curp" class="invalid-feedback">{{ errors.curp }}</div>
+                </mat-form-field>
+               
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>RFC</mat-label>
+                    <input matInput [(ngModel)]="user.rfc" placeholder="Escriba su RFC">
+                    <mat-icon matPrefix class="my-icon">picture_as_pdf</mat-icon>
+                    <div *ngIf="errors.rfc" class="invalid-feedback">{{ errors.rfc }}</div>
+                </mat-form-field>
+                
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Edad</mat-label>
+                    <input matInput [(ngModel)]="user.edad" mask = '00'placeholder="Escriba su Edad">
+                    <mat-icon matPrefix class="my-icon">person</mat-icon>
+                    <div *ngIf="errors.edad" class="invalid-feedback">{{ errors.edad }}</div>
+                </mat-form-field>
+                
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Telefono</mat-label>
+                    <input matInput [(ngModel)]="user.telefono" mask='(000) 000-0000' placeholder="Escriba su Telefono">
+                    <mat-icon matPrefix class="my-icon">phone_iphone</mat-icon>
+                    <div *ngIf="errors.telefono" class="invalid-feedback">{{ errors.telefono }} </div>
+                </mat-form-field>
+               
+
+                <mat-form-field class="mat-input" appearance="outline">
+                    <mat-label>Ocupacion</mat-label>
+                    <input matInput [(ngModel)]="user.ocupacion" placeholder="Escriba su Ocupacion">
+                    <mat-icon matPrefix class="my-icon">school</mat-icon>
+                    <div *ngIf="errors.ocupacion" class="invalid-feedback">{{ errors.ocupacion }}</div>
+                </mat-form-field>
+              
+            </div>
+
+            <div class="botones">
+                <button class="btn-registrarme" type="submit" (click)="registrar()" >Registrarme</button>
+                <button class="btn-cancelar" type="submit" (click)="regresar()" >Cancelar</button>
+            </div>
+
+        </div>
+    </div>
+</section>

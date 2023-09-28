@@ -1,0 +1,62 @@
+<section class="producto-registro">
+    <div class="wrapper">
+
+        <div class="header-registro">
+            <mat-icon class="icon-back" (click)="regresar()">arrow_back</mat-icon>
+            <span *ngIf="!editar" class="title">ZONA DE REGISTRO DE PRODUCTOS</span>
+            <span *ngIf="editar" class="title">Actualizar usuario</span>
+            <mat-icon class="icon-home" (click)="regresar()" >home</mat-icon>
+
+        </div>
+<div class="sections">
+    <div class="section-left">
+
+        <span *ngIf="!editar" class="title">PRODUCTOS</span>
+
+        <mat-form-field class="mat-input" appearance="outline">
+            <mat-label>ID</mat-label>
+            <input matInput [(ngModel)]="producto.id" name="id" placeholder="Escriba el ID del producto">
+            <mat-icon matPrefix class="my-icon">create</mat-icon>
+            <div *ngIf="errors.id" class="invalid-feedback">{{ errors.id }}</div>
+        </mat-form-field>
+
+        <mat-form-field class="mat-input" appearance="outline">
+            <mat-label>NOMBRE PRODUCTO</mat-label>
+            <input matInput [(ngModel)]="producto.nombre_producto" name="nombre_producto" placeholder="Escriba el nombre del producto">
+            <mat-icon matPrefix class="my-icon">search</mat-icon>
+            <div *ngIf="errors.nombre_producto" class="invalid-feedback">{{ errors.nombre_producto }}</div>
+        </mat-form-field>
+
+        <mat-form-field class="mat-input" appearance="outline">
+            <mat-label>PRECIO</mat-label>
+            <input matInput [(ngModel)]="producto.precio" name="precio" mask='00.00' placeholder="$00.00">
+            <mat-icon matPrefix class="my-icon">price_change</mat-icon>
+            <div *ngIf="errors.precio" class="invalid-feedback">{{ errors.precio }}</div>
+        </mat-form-field>
+
+        <mat-form-field class="mat-input" appearance="outline">
+            <mat-label>DEPARTAMENTO</mat-label>
+            <input matInput [(ngModel)]="producto.departamento" name="departamento" placeholder="Escriba el departamento al que pertence el producto">
+            <mat-icon matPrefix class="my-icon">book</mat-icon>
+            <div *ngIf="errors.departamento" class="invalid-feedback">{{ errors.departamento }}</div>
+        </mat-form-field>
+        
+        <div class="botones">
+            <button class="btn-registrarme" type="submit" (click)="registrar()">Registrarme</button>
+            <button class="btn-cancelar" type="submit">Cancelar</button>
+        </div>
+
+    </div>
+
+    <div class="section-right">
+
+        <div class="logito">
+            <img src="/assets/IMG/pngwing.png" class="logito-perezoso">
+            <span class="mi tiendita">MI TIENDITA</span>
+        </div>
+          
+    </div>
+</div>
+       
+    </div>
+</section>

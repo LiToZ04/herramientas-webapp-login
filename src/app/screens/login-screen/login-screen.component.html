@@ -6,11 +6,13 @@
                 <h3 class="titulo">INICIAR SESION</h3>
 
                 <input type="email" class="email-input" id="email" placeholder="Ingrese Correo electrónico">
+                <div *ngIf="errors.username" class="invalid-feedback">{{ errors.username }}</div>
 
                 <div class="contenedor-contrasena">
                     <input type="password" class="password-input" id="password" [type]="hide ? 'password':'text'"  placeholder="Ingrese contraseña">
                     <i class="material-icons" matSuffix (click)="hide = !hide"> {{hide ? 'visibility': 'visibility_off'}} </i>
                 </div>
+                    <div *ngIf="errors.password" class="invalid-feedback">{{ errors.password }}</div>
                
 
                     <div class="olvide">
@@ -18,7 +20,7 @@
                     </div>
 
                     <div class="botones">
-                    <button class="btn-iniciar-sesion" type="submit">Iniciar sesión</button>
+                    <button class="btn-iniciar-sesion" type="submit" (click)="goHome()">Iniciar sesión</button>
                     <button class="btn-registrar" type="submit" (click)="goRegistro()">Registrarme</button>
                     </div>
                    

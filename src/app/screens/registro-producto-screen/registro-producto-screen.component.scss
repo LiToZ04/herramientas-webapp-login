@@ -1,21 +1,16 @@
+.section-registro{
+    width: 100%;
+    height: 100%;
+}
 .wrapper{
     width: 100vw;
     height: 100vh;
     //Flex
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: row;
     align-items: flex-start;
     background-image: url("/assets/IMG/BackGroundRegistro.png");
-}
-
-.section-registro{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 .header-registro{
@@ -58,22 +53,32 @@
     cursor: pointer;
 }
 
-.body-registro{
-    width: 60%;
-    height: 90vh;
+.sections{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 1.5rem;
-    gap: 1.5rem;
-    
+    flex-direction: row;
+    justify-content: row;
+    align-items: flex-start;
+}
+.section-left
+{
+    margin-top: 10vh;
+    width: 50vw;
+    height: 70vh;
+     //Flex
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     align-self: left;
+     margin-left: 150px;
+
 }
 
 .mat-input
 {
+    
     width: 100%!important;
-    height: 48px!important;
+    height: 50px!important;
     text-align: left!important;
     opacity: 1;
     
@@ -113,8 +118,23 @@
     margin-left: 150px;
 }
 
-.eye-icon
+.section-right
 {
-    opacity: 0.5;
-    cursor: pointer;
+    margin-top: 10vh;
+    width: 50vw;
+    height: 70vh;
+     //Flex
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     align-self: left;
+     margin-left: 150px;
+}
+
+.logito-perezoso
+{
+    margin-right: 10vw;
+    margin-bottom: 30vh;
+    width: 500px;
+    height: 600px;
 }

@@ -10,6 +10,13 @@ import { Router } from '@angular/router';
 
 export class LoginScreenComponent 
 {
+    //variable
+    hide = true;
+    public type: String = "password";
+    public username: String = "";
+    public password: String = "";
+    public errors:any = {};
+
   constructor
   (
     private router:Router,
@@ -18,12 +25,14 @@ export class LoginScreenComponent
 
   ngOnInit():void{}
 
-  //variable
-  hide = true;
-
   //Metodo
   public goRegistro()
   {
     this.router.navigate(["registro"]);
+  }
+
+  public goHome()
+  {
+      this.router.navigate(["tarea"]);
   }
 }
