@@ -22,7 +22,7 @@
     "@angular/router": "^16.2.0",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
-    "jquery": "^3.6.1",
+    "jquery": "^3.7.1",
     "ngx-cookie-service": "^16.0.1",
     "ngx-mask": "^13.2.1",
     "popper.js": "^1.16.1",

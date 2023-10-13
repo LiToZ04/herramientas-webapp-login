@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { FacadeService } from 'src/app/services/facade.service';
+declare var $:any;
 
 @Component
 ({
@@ -20,6 +22,7 @@ export class LoginScreenComponent
   constructor
   (
     private router:Router,
+    public facadeService: FacadeService,
   )
   {}
 
@@ -33,6 +36,16 @@ export class LoginScreenComponent
 
   public goHome()
   {
-      this.router.navigate(["tarea"]);
+    this.errors = [];
+
+    //validacion
+    this.errors = this.facadeService.validarLogin(this.username, this.password);
+    if(!$.isEmptyObject(this.errors))
+    {
+      return false;
+    }
+    //pasa la validacion
+    this.router.navigate(["home"]);
+   
   }
 }

@@ -113,9 +113,10 @@ export class RegistroScreenComponent implements OnInit
     }
 
     //validar que las contrasena sean iguales
-    if(this.user.password == this.user.confirmar_password)
+    if(this.user.password== this.user.confirmar_password)
     {
       alert("ok");
+      return true;
     }
     else
     {

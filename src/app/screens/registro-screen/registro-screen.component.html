@@ -90,7 +90,7 @@
 
                 <mat-form-field class="mat-input" appearance="outline">
                     <mat-label>Edad</mat-label>
-                    <input matInput [(ngModel)]="user.edad" mask = '00'placeholder="Escriba su Edad">
+                    <input matInput [(ngModel)]="user.edad" mask = '00' placeholder="Escriba su Edad">
                     <mat-icon matPrefix class="my-icon">person</mat-icon>
                     <div *ngIf="errors.edad" class="invalid-feedback">{{ errors.edad }}</div>
                 </mat-form-field>
@@ -114,7 +114,7 @@
             </div>
 
             <div class="botones">
-                <button class="btn-registrarme" type="submit" (click)="registrar()" >Registrarme</button>
+                <button class="btn-registrarme" type="button" (click)="registrar()" >Registrarme</button>
                 <button class="btn-cancelar" type="submit" (click)="regresar()" >Cancelar</button>
             </div>
 

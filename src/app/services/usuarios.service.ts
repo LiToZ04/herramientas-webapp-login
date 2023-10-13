@@ -67,6 +67,8 @@ export class UsuariosService {
     }
     //fin funcion email
 
+    //
+    
     if (!this.validatorService.required(data["password"]))
     {
       error["password"] = this.errorService.required;  
@@ -77,6 +79,7 @@ export class UsuariosService {
       error["confirmar_password"] = this.errorService.required;  
     }
 
+    //
     if (!this.validatorService.required(data["fecha_nacimiento"]))
     {
       error["fecha_nacimiento"] = this.errorService.required;  
