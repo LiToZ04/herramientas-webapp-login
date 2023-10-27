@@ -21,6 +21,7 @@ import { RegistroProductoScreenComponent } from './screens/registro-producto-scr
 //ngx mask
 import { NgxMaskModule, IConfig } from 'ngx-mask';
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
+
 @NgModule
 ({
   declarations: 

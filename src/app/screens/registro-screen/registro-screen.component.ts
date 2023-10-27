@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
-declare var $:any; //JQuery
+declare var $ :any; //JQuery
 
 @Component
 ({

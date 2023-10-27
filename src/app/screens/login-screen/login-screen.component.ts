@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FacadeService } from 'src/app/services/facade.service';
-declare var $:any;
+declare var $ : any;
+
 
 @Component
 ({
@@ -12,6 +13,7 @@ declare var $:any;
 
 export class LoginScreenComponent 
 {
+  
     //variable
     hide = true;
     public type: String = "password";
@@ -37,8 +39,7 @@ export class LoginScreenComponent
   public goHome()
   {
     this.errors = [];
-
-    //validacion
+  //validacion
     this.errors = this.facadeService.validarLogin(this.username, this.password);
     if(!$.isEmptyObject(this.errors))
     {
@@ -48,4 +49,5 @@ export class LoginScreenComponent
     this.router.navigate(["home"]);
    
   }
+  
 }
